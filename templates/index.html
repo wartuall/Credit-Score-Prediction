@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="margin:auto; width:50%; border:3px solid green; padding: 10px">Credit Score  Calculator</h1>
+
+    <form style="margin:auto; width:50%; border:3px solid green; padding: 10px" method="POST" action="/submit" enctype="multipart/form-data" >
+        <h4>Enter Your Employment Status:<br>Example: <b>For employed=1, Unemployed=0, Self-Employed=2.</b></h4>
+        <input type="number" min="0" max="2"name="No1"  placeholder="Enter Employment Status">
+        <h4>Enter Your Education Level:<br>Example: <b>For High School=1, Bachelor=2, Master=3, Doctorate=4.</b></h4>
+        <input type="number" min="0" max="4"name="No2"  placeholder="Enter Your Education Level">
+        <h4>Enter Number of Credit Accounts You have.</b></h4>
+        <input type="number" min="0" max="10"name="No3"  placeholder="Enter Number of Credit Accounts">
+        <h4>Enter Your Credit Utilization Ratio Between 0.1 to 0.99.</b></h4>
+        <input type="number" placeholder="0.1" step="0.01" min="0" max="0.99" name="No4"  placeholder="Enter Your Credit Utilization Ratio">
+        <h4>Enter Payment History.</b></h4>
+        <input type="number" min="0" max="3000"name="No5" placeholder="Enter Payment History"><br><br>
+        
+        <input type="submit">
+    </form>  
+
+    {% if number %}
+        
+    <h2 style="margin:auto; width:50%; border:3px solid green; padding: 10px">Your Credit Score is: <i>{{number}}</i> .</h2>
+
+    {% endif %}
+</body>
+</html>
